@@ -1,0 +1,49 @@
+/* App.css */
+
+.header {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;            /* vertically center items */
+  padding: 10px 20px;             /* optional spacing */
+  border: 1px solid black;
+}
+
+.logo {
+  width: 60px;   /* or any size you prefer */
+  height: auto;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;       /* spacing between nav items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items li {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.res-cards{
+    display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+  padding: 5px;
+  width: 200px;
+}
+
+.res-cards:hover{
+   border: 1px solid black;
+
+}
+
+.res-logo{
+  width: 100%;
+}
+
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+}
