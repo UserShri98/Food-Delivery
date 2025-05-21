@@ -5,7 +5,7 @@ import { CARD_URL } from "../utils/constants";
     return (
       <div className='res-cards' style={{ backgroundColor: "#f0f0f0" }}>
         <img className="res-logo" src={CARD_URL+cloudinaryImageId }/>
-        {name}
+      <h3>{name}</h3>
         <h4>{avgRating}*</h4><br/>
         <h4 style={{ fontSize: "large" }}>{deliveryTime}</h4>
         <h6>{cuisines.join(', ')}</h6>
