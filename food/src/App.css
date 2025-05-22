@@ -48,7 +48,15 @@ flex-direction: row;
   flex-wrap: wrap;
 }
 
-.filter-btn{
+.top-rated{
   margin: 10px;
   cursor: pointer;
+}
+
+.filter-btn{
+  display: flex;
+}
+
+.search{
+  padding: 10px;
 }

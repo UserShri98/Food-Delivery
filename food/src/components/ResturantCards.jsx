@@ -1,7 +1,7 @@
 import { CARD_URL } from "../utils/constants";
   const ResturantCards = ({ resData }) => {
 
-     const {name,avgRating,cuisines,cloudinaryImageId,sla:{deliveryTime}}=resData
+     const {name,avgRating,cuisines,cloudinaryImageId,sla:{deliveryTime}}=resData?.info
     return (
       <div className='res-cards' style={{ backgroundColor: "#f0f0f0" }}>
         <img className="res-logo" src={CARD_URL+cloudinaryImageId }/>
