@@ -17,15 +17,16 @@ const RestaurantMenu = () => {
         setResInfo(json.data)
     }
 
-    if(resInfo===null) return;
+    if(resInfo===null)  return <h2>Loading...</h2>;
 
-    const{name,cuisines,costForTwoMessage}=resInfo?.cards[1]?.card?.card?.info
+    const{name,cuisines,costForTwoMessage}=resInfo?.cards[2]?.card?.card?.info
 
 
     return (
         <div>
             <div>
                 <h1>{name}</h1>
+                <p>{cuisines.join(', ')}-{costForTwoMessage}</p>
                 <h1>Menu</h1>
                 <ul>
                     <li>Panipuri</li>
