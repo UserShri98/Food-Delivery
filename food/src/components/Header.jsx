@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import cuisineIcon from '../assets/cuisine-icon-3.jpg';
+import { Link } from 'react-router-dom';
 
   const Header = () => {
   
@@ -13,9 +14,9 @@ import cuisineIcon from '../assets/cuisine-icon-3.jpg';
         </div>
         <div className='nav-items'>
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
+            <Link to='/'>Home</Link>
+            <Link to='/contact'>Contact</Link>
+            <Link to='/about'>About</Link>
             <li>Cart</li>
          <button onClick={()=>
          btnName==="Login"? setBtnName("Logout"): setBtnName("Login")}
