@@ -60,3 +60,14 @@ flex-direction: row;
 .search{
   padding: 10px;
 }
+
+.user-card{
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.avatar-img{
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
