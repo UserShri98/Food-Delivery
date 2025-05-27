@@ -8,11 +8,15 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
+import { lazy,Suspense } from 'react';
+// import Grocery from './components/Grocery';
 
 import {createBrowserRouter,Outlet} from 'react-router-dom'
 
-function App() {
 
+const Grocery=lazy(()=>import('./components/Grocery'))
+
+function App() {
  
   return (
     <>
@@ -41,6 +45,10 @@ function App() {
     {
     path:'/contact',
     element:<Contact/>
+  },
+  {
+    path:'/grocery',
+    element:<Suspense><Grocery/></Suspense>
   },
    {
     path:'/restaurant/:resId',

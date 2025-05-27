@@ -1,22 +1,25 @@
+
+@import "tailwindcss";
+
+
 /* App.css */
 
-.header {
+/* .header {
   display: flex;
-  justify-content: space-between; /* logo left, nav right */
-  align-items: center;            /* vertically center items */
-  padding: 10px 20px;             /* optional spacing */
-  border: 1px solid black;
+  justify-content: space-between;
+  align-items: center;          
+  padding: 10px 20px;        
 }
 
 .logo {
-  width: 60px;   /* or any size you prefer */
+  width: 60px;  
   height: auto;
 }
 
 .nav-items ul {
   list-style: none;
   display: flex;
-  gap: 20px;       /* spacing between nav items */
+  gap: 20px;      
   margin: 0;
   padding: 0;
 }
@@ -70,4 +73,4 @@ flex-direction: row;
   width: 200px;
   height: 200px;
   padding: 20px;
-}
+} */

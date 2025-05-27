@@ -23,6 +23,7 @@ const Header = () => {
             <li>Online Status:{onlineStatus===true?"🟢":"🔴"}</li>
             <Link to='/'>Home</Link>
             <Link to='/contact'>Contact</Link>
+            <Link to='/grocery'>Grocery</Link>
             <Link to='/about'>About</Link>
             <li>Cart</li>
          <button onClick={()=>
