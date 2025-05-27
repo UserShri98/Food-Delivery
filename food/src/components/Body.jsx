@@ -1,7 +1,7 @@
 import ResturantCards from "./ResturantCards";
-import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import {Link} from 'react-router-dom'
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestuarants, setListRestuarants] = useState([]);
@@ -9,7 +9,7 @@ const Body = () => {
   const [searchText,setSearchText]=useState("")
 
   useEffect(() => {
-    fetchData();
+    fetchData(); 
   }, []);
 
  const fetchData = async () => {
@@ -38,6 +38,11 @@ const Body = () => {
     console.error("Error fetching restaurant data:", err);
   }
 };
+
+ const onlineStatus=useOnlineStatus();
+ if(onlineStatus===false) return (
+  <h1>You're not online!Check your internet connection</h1>
+ )
 
 
   return (
