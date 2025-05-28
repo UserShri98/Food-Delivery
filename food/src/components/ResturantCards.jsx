@@ -3,9 +3,9 @@ import { CARD_URL } from "../utils/constants";
 
      const {name,avgRating,cuisines,cloudinaryImageId,sla}=resData?.info
     return (
-      <div className='res-cards' style={{ backgroundColor: "#f0f0f0" }}>
-        <img className="res-logo" src={CARD_URL+cloudinaryImageId }/>
-      <h3>{name}</h3>
+      <div className='p-4 mx-4 w-[180px] rounded-lg bg-gray-100 hover:bg-gray-200'>
+        <img className="rounded-lg" src={CARD_URL+cloudinaryImageId }/>
+      <h3 className="font-bold py-4 text-lg">{name}</h3>
         <h4>{avgRating}*</h4><br/>
         {/* <h4 style={{ fontSize: "large" }}>{deliveryTime}</h4> */}
         <h4>{sla.slaString}</h4>
