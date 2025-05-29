@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import { lazy,Suspense } from 'react';
+import UserContext from './utils/UserContext';
 // import Grocery from './components/Grocery';
 
 import {createBrowserRouter,Outlet} from 'react-router-dom'
@@ -18,12 +19,24 @@ const Grocery=lazy(()=>import('./components/Grocery'))
 
 function App() {
  
+ const [userName,setUserName]=useState();
+
+ useEffect(()=>{
+  //API Call
+  const data={
+    name:"Shrinath"
+  }
+  setUserName(data.name)
+ },[])
+
   return (
     <>
+    <UserContext.Provider value={{loggedUser:userName}}>
       <div>
         <Header />
        <Outlet/>
       </div>
+      </UserContext.Provider>
 
     </>
   )

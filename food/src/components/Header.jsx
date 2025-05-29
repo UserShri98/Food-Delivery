@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import cuisineIcon from '../assets/cuisine-icon-3.jpg';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
+import UserContext from '../utils/UserContext';
   
 
 
@@ -11,6 +12,9 @@ const Header = () => {
      const [btnName,setBtnName]=useState("Login")
 
      const onlineStatus=useOnlineStatus();
+
+     const {loggedUser}=useContext(UserContext)
+     
 
     return (
 
@@ -30,6 +34,7 @@ const Header = () => {
          btnName==="Login"? setBtnName("Logout"): setBtnName("Login")}
           >
             {btnName}</button>
+            <li className='px-4 font-bold'>{loggedUser}</li>
 
           </ul>
         </div>
