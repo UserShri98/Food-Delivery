@@ -3,7 +3,8 @@ import cuisineIcon from '../assets/cuisine-icon-3.jpg';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import UserContext from '../utils/UserContext';
-  
+import { useSelector } from 'react-redux';
+
 
 
 const Header = () => {
@@ -15,6 +16,8 @@ const Header = () => {
 
      const {loggedUser}=useContext(UserContext)
      
+     const CartItems=useSelector((store)=>store.cart.items)
+     console.log(CartItems)
 
     return (
 
@@ -29,12 +32,12 @@ const Header = () => {
             <li className='px-4'><Link to='/contact'>Contact</Link></li>
             <li className='px-4'><Link to='/grocery'>Grocery</Link></li>
             <li className='px-4'><Link to='/about'>About</Link></li>
-            <li className='px-4'>Cart</li>
+            <li className='px-4 font-bold text-2xl'><Link to='/cart'>Cart-({CartItems.length}items)</Link></li>
          <button onClick={()=>
          btnName==="Login"? setBtnName("Logout"): setBtnName("Login")}
           >
             {btnName}</button>
-            <li className='px-4 font-bold'>{loggedUser}</li>
+            <li className='px-4 text-xs'>{loggedUser}</li>
 
           </ul>
         </div>
