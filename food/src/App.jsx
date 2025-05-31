@@ -11,7 +11,7 @@ import Cart from './components/Cart';
 import RestaurantMenu from './components/RestaurantMenu';
 import { lazy,Suspense } from 'react';
 import UserContext from './utils/UserContext';
-import {Provider} from 'react-redux'
+import {Provider} from 'react-redux';
 // import Grocery from './components/Grocery';
 
 import {createBrowserRouter,Outlet} from 'react-router-dom'
