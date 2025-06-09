@@ -2,6 +2,7 @@ import ResturantCards from "./ResturantCards";
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import useOnlineStatus from "../utils/useOnlineStatus";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestuarants, setListRestuarants] = useState([]);
@@ -48,7 +49,6 @@ const Body = () => {
   return (
     <div className="bg-gradient-to-br from-green-50 via-white to-yellow-50 min-h-screen px-6 py-6">
       <div className="max-w-screen-xl mx-auto">
-        {/* Filters */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
           <div className="flex items-center gap-4">
             <input
@@ -83,14 +83,18 @@ const Body = () => {
           </button>
         </div>
 
-        {/* Restaurant Cards */}
-        <div className="flex flex-wrap gap-6 justify-center">
-          {filteredRes.map((restuarant) => (
-            <Link key={restuarant.info.id} to={"/restaurant/" + restuarant.info.id}>
-              <ResturantCards resData={restuarant} />
-            </Link>
-          ))}
-        </div>
+       {filteredRes.length === 0 ? (
+  <Shimmer />
+) : (
+  <div className="flex flex-wrap justify-center">
+    {filteredRes.map((restaurant) => (
+      <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id}>
+        <ResturantCards resData={restaurant} />
+      </Link>
+    ))}
+  </div>
+)}
+
       </div>
     </div>
   );

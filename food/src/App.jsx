@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header';
 import Body from './components/Body';
@@ -12,8 +10,7 @@ import RestaurantMenu from './components/RestaurantMenu';
 import { lazy,Suspense } from 'react';
 import UserContext from './utils/UserContext';
 import {Provider} from 'react-redux';
-// import Grocery from './components/Grocery';
-
+import OrderConfirmation from './components/OrderConfirmation';
 import {createBrowserRouter,Outlet} from 'react-router-dom'
 import appStore from './utils/appStore';
 
@@ -63,6 +60,10 @@ function App() {
     {
     path:'/contact',
     element:<Contact/>
+  },
+  {
+    path:"/order-confirmation",
+    element:<OrderConfirmation />
   },
   {
     path:'/grocery',

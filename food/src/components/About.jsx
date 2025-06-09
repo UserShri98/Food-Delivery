@@ -9,7 +9,6 @@ const About = () => {
       </div>
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        {/* Section 1: About the App */}
         <div className="bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
           <h2 className="text-2xl font-semibold text-green-800 mb-2">🍽️ Our Mission</h2>
           <p className="text-gray-700">
@@ -17,7 +16,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Section 2: About the Team */}
         <div className="bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
           <h2 className="text-2xl font-semibold text-green-800 mb-2">👨‍💻 Meet the Creator</h2>
           <p className="text-gray-700">

@@ -15,7 +15,6 @@ const Header = () => {
     <header className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 py-4 transition-all duration-200">
         
-        {/* Logo Section */}
         <div className="flex items-center gap-4 mb-4 md:mb-0">
           <img
             src={cuisineIcon}
@@ -27,17 +26,14 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Navigation Section */}
         <nav className="w-full md:w-auto">
           <ul className="flex flex-wrap items-center justify-center gap-4 text-gray-800 font-semibold text-sm md:text-base">
             
-            {/* Online Status */}
             <li className="flex items-center gap-1 text-sm text-gray-500">
               <span className="text-xl">{onlineStatus ? "🟢" : "🔴"}</span>
               <span className="hidden sm:inline">Online</span>
             </li>
 
-            {/* Nav Links */}
             <li>
               <Link to="/" className="hover:text-green-600 transition duration-200">Home</Link>
             </li>
@@ -51,7 +47,6 @@ const Header = () => {
               <Link to="/about" className="hover:text-green-600 transition duration-200">About</Link>
             </li>
 
-            {/* Cart */}
             <li>
               <Link
                 to="/cart"
@@ -64,7 +59,6 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Login Button */}
             <li>
               <button
                 onClick={() =>
@@ -76,7 +70,6 @@ const Header = () => {
               </button>
             </li>
 
-            {/* Profile/Username (Dropdown Style) */}
             <li className="relative group hidden sm:block">
               <div className="cursor-pointer text-sm text-gray-600 hover:text-gray-800 transition">
                 👤 {loggedUser}

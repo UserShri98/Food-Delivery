@@ -8,7 +8,6 @@ const Contact = () => {
         </p>
       </div>
 
-      {/* Contact Form */}
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
         <form className="grid grid-cols-1 gap-6">
           <div>
@@ -46,7 +45,6 @@ const Contact = () => {
         </form>
       </div>
 
-      {/* Support Info */}
       <div className="text-center text-sm text-gray-500 mt-10">
         Or email us at <span className="font-medium text-green-700">support@foodapp.com</span>
       </div>
